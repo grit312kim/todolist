@@ -1,25 +1,34 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import InputTodo from './components/InputTodo'
 
 class App extends Component {
+  constructor(props){
+    super(props)
+    this.state ={
+      inputColor:''
+    }
+  }
+  setInputColor(color){
+    this.setState({
+      inputColor:color
+    })
+  }
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React !!
-          </a>
-        </header>
+        <div className="Todo-body">
+          <button onClick={
+            ()=>this.setInputColor('yellow')
+          } >노란색</button>
+          <button onClick={
+            ()=>this.setInputColor('green')
+          } >초록색</button>
+          <button onClick={
+            ()=>this.setInputColor('red')
+          } >빨간색</button>
+        </div>
+        <InputTodo color={this.state.inputColor}/>
       </div>
     );
   }
