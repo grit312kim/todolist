@@ -1,3 +1,6 @@
+App.js : 기본구조
+(src/index.js 파일에서 src/App 파일을 루트에 랜더링 한 경우)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
