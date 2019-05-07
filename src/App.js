@@ -41,8 +41,7 @@ class App extends Component {
           addTodo={this.addTodo.bind(this)}
           />
         <TodoList
-          todoList={this.state.todoList}
-          color={this.state.inputColor}/>
+          todoList={this.state.todoList}/>
       </div>
     );
   }

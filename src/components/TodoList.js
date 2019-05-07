@@ -18,6 +18,8 @@ class TodoList extends Component {
                 let color = this.props.color;
                 if(i%2===0){
                     color = 'gray'
+                }else{
+                    color ='red'
                 }
                 return <ListItem todo={value} key={i}
                     color={color}/>
