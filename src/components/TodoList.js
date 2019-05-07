@@ -10,23 +10,21 @@ class TodoList extends Component {
   }
   render() {
     console.log('TodoList render')
-    let style = {backgroundColor: this.props.color}
     const list = 
         this.props.todoList.map(
             (value,i)=>{
-                console.log('value : ' + value + ' i : ' + i)
-                let color = this.props.color;
+                let color;
                 if(i%2===0){
                     color = 'gray'
                 }else{
                     color ='red'
                 }
-                return <ListItem todo={value} key={i}
+                return <ListItem todo={value} 
                     color={color}/>
             }
         )
     return (
-      <div style= {style}>
+      <div>
         {list}
       </div>
     );
